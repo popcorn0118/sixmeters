@@ -12,3 +12,13 @@ Template: astra
 .home header, .home footer {
   display: none;
 }
+
+.vp-filter__style-minimal .vp-filter__item.vp-filter__item-active > a, .vp-filter__style-minimal .vp-filter__item > a:hover, .vp-filter__style-minimal .vp-filter__item a:focus {
+  color: #D9C797 !important;
+}
+
+@media (max-width: 768px) {
+  .virtual-reality-360-iframe iframe {
+    height: 400px;
+  }
+}

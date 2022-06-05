@@ -9,9 +9,28 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+
+$primary :#D9C797;
+$sec :#AB9D77;
+
 //首頁
 .home {
     header, footer {
         display: none;
+    }
+}
+
+//3D作品
+.vp-filter__style-minimal .vp-filter__item {
+    &.vp-filter__item-active > a, >a:hover, a:focus {
+        color: $primary !important;
+    }
+}
+//360
+.virtual-reality-360-iframe {
+    iframe {
+        @media (max-width:768px) {
+            height: 400px;
+        }
     }
 }
