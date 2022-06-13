@@ -10,7 +10,7 @@ Text Domain: astra-child
 Template: astra
 */
 
-$primary :#D9C797;
+$primary :#e2c699;
 $sec :#AB9D77;
 
 //首頁
@@ -19,12 +19,51 @@ $sec :#AB9D77;
         display: none;
     }
 }
+//手機板選單
+@media (max-width: 921px) {
+    .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
+        max-width: 100% !important;
+    }
+    .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
+        background-color: #1a1a1a !important;
+    }
+    #ast-hf-mobile-menu {
+        background-color: transparent;
+        .menu-item {
+            .menu-link {
+                background: #1a1a1a !important;
+                text-align: center;
+            }
+        }
+    }
+    .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
+        font-size: 40px !important;
+        margin: 10px 10px 0 0;
+        @media (max-width: 544px) {
+            margin:0;
+            padding: 17px 35px 20px 0 !important;
+        }
+        .ahfb-svg-iconset svg {
+            width: 30px !important;
+            height: 30px !important;
+        }
+    }
+}
 
 //3D作品
 .vp-filter__style-minimal .vp-filter__item {
     &.vp-filter__item-active > a, >a:hover, a:focus {
         color: $primary !important;
     }
+}
+.vp-fancybox .fancybox-thumbs__list a::before {
+    border-color: $primary !important;
+}
+.vp-portfolio__items-style-fade .vp-portfolio__item-overlay {
+
+}
+.vp-portfolio__items-style-fade {
+    --vp-items-style-fade--image-hover__transform: scale(1) !important;
 }
 //360
 .virtual-reality-360-iframe {

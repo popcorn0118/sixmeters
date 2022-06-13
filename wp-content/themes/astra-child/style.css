@@ -13,8 +13,50 @@ Template: astra
   display: none;
 }
 
+@media (max-width: 921px) {
+  .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
+    max-width: 100% !important;
+  }
+  .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
+    background-color: #1a1a1a !important;
+  }
+  #ast-hf-mobile-menu {
+    background-color: transparent;
+  }
+  #ast-hf-mobile-menu .menu-item .menu-link {
+    background: #1a1a1a !important;
+    text-align: center;
+  }
+  .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
+    font-size: 40px !important;
+    margin: 10px 10px 0 0;
+  }
+}
+
+@media (max-width: 921px) and (max-width: 544px) {
+  .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
+    margin: 0;
+    padding: 17px 35px 20px 0 !important;
+  }
+}
+
+@media (max-width: 921px) {
+  .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close .ahfb-svg-iconset svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
 .vp-filter__style-minimal .vp-filter__item.vp-filter__item-active > a, .vp-filter__style-minimal .vp-filter__item > a:hover, .vp-filter__style-minimal .vp-filter__item a:focus {
-  color: #D9C797 !important;
+  color: #e2c699 !important;
+}
+
+.vp-fancybox .fancybox-thumbs__list a::before {
+  border-color: #e2c699 !important;
+}
+
+.vp-portfolio__items-style-fade {
+  --vp-items-style-fade--image-hover__transform: scale(1) !important;
 }
 
 @media (max-width: 768px) {
