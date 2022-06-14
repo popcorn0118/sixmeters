@@ -59,6 +59,11 @@ Template: astra
   --vp-items-style-fade--image-hover__transform: scale(1) !important;
 }
 
+.vp-portfolio__items-style-fade .vp-portfolio__item-meta-title {
+  font-size: 15px !important;
+  color: #c2c2c2 !important;
+}
+
 @media (max-width: 768px) {
   .virtual-reality-360-iframe iframe {
     height: 400px;
