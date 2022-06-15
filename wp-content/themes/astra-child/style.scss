@@ -36,17 +36,91 @@ $sec :#AB9D77;
             }
         }
     }
-    .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
-        font-size: 40px !important;
-        margin: 10px 10px 0 0;
-        @media (max-width: 544px) {
-            margin:0;
-            padding: 17px 35px 20px 0 !important;
+    // .site-header {
+    //     z-index: 10001;
+    // }
+    .menu-btn-custom {
+        // 自定義漢堡按鈕
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        z-index: 999999;
+        width: 47px;
+        height: 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        flex-direction: column;
+        span {
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.4s;
+            transform-origin: right;
         }
-        .ahfb-svg-iconset svg {
-            width: 30px !important;
-            height: 30px !important;
+        &.active {
+            span {
+                transition: 0.4s;
+                &:first-of-type {
+                    transform: rotate(-45deg);
+                }
+                &:nth-of-type(2) {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:last-of-type {
+                    transform: rotate(45deg);
+                }
+            }
         }
+    }
+    .ast-mobile-menu-trigger-minimal {
+        // 隱藏原本的漢堡按鈕
+        display: none !important;
+        // background: red !important;
+        // margin-right: 50px;
+        // display: flex !important;
+    }
+    .ast-mobile-popup-drawer {
+        .ast-mobile-popup-header {
+            min-height: 80px !important;
+            .menu-toggle-close {
+                // 隱藏原本的關閉按鈕
+                display: none !important;
+                // font-size: 40px !important;
+                // margin: 10px 10px 0 0;
+                // @media (max-width: 544px) {
+                //     margin:0;
+                //     padding: 17px 35px 20px 0 !important;
+                // }
+                // .ahfb-svg-iconset svg {
+                //     width: 30px !important;
+                //     height: 30px !important;
+                // }
+            }
+        }
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        // transition: opacity 0.7s ease-in,left 0s 0.7s,right 0s 0.7s !important;
+        transition: 0.5s !important;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10000;
+            // transition: opacity 0.7s ease-in,left 0s 0.7s,right 0s 0.7s;
+            transition: 0.5s !important;
+        }
+    }
+    .ast-mobile-popup-drawer .ast-mobile-popup-inner {
+        max-width: 100%;
+        background: #1a1a1a;
+        opacity: 1;
+        transform: translateX(0) !important;
+    }
+    .ast-desktop-popup-content {
+        display: none;
     }
 }
 
@@ -66,8 +140,11 @@ $sec :#AB9D77;
     --vp-items-style-fade--image-hover__transform: scale(1) !important;
 }
 .vp-portfolio__items-style-fade .vp-portfolio__item-meta-title {
-    font-size: 15px !important;
+    font-size: 16px !important;
     color: #c2c2c2 !important;
+}
+.vp-fancybox .fancybox-caption__body h3 {
+    font-size: 16px !important;
 }
 //360
 .virtual-reality-360-iframe {

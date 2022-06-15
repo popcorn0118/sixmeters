@@ -27,23 +27,85 @@ Template: astra
     background: #1a1a1a !important;
     text-align: center;
   }
-  .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
-    font-size: 40px !important;
-    margin: 10px 10px 0 0;
+  .menu-btn-custom {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    z-index: 999999;
+    width: 47px;
+    height: 42px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-}
-
-@media (max-width: 921px) and (max-width: 544px) {
-  .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
-    margin: 0;
-    padding: 17px 35px 20px 0 !important;
+  .menu-btn-custom span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
-}
-
-@media (max-width: 921px) {
-  .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close .ahfb-svg-iconset svg {
-    width: 30px !important;
-    height: 30px !important;
+  .menu-btn-custom.active span {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .menu-btn-custom.active span:first-of-type {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .menu-btn-custom.active span:nth-of-type(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .menu-btn-custom.active span:last-of-type {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .ast-mobile-menu-trigger-minimal {
+    display: none !important;
+  }
+  .ast-mobile-popup-drawer {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    -webkit-transition: 0.5s !important;
+    transition: 0.5s !important;
+  }
+  .ast-mobile-popup-drawer .ast-mobile-popup-header {
+    min-height: 80px !important;
+  }
+  .ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
+    display: none !important;
+  }
+  .ast-mobile-popup-drawer.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+    -webkit-transition: 0.5s !important;
+    transition: 0.5s !important;
+  }
+  .ast-mobile-popup-drawer .ast-mobile-popup-inner {
+    max-width: 100%;
+    background: #1a1a1a;
+    opacity: 1;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+  }
+  .ast-desktop-popup-content {
+    display: none;
   }
 }
 
@@ -60,8 +122,12 @@ Template: astra
 }
 
 .vp-portfolio__items-style-fade .vp-portfolio__item-meta-title {
-  font-size: 15px !important;
+  font-size: 16px !important;
   color: #c2c2c2 !important;
+}
+
+.vp-fancybox .fancybox-caption__body h3 {
+  font-size: 16px !important;
 }
 
 @media (max-width: 768px) {
