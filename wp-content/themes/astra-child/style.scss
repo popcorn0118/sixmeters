@@ -44,7 +44,7 @@ $sec :#AB9D77;
         position: absolute;
         top: 16px;
         right: 20px;
-        z-index: 999999;
+        z-index: 99993;
         width: 47px;
         height: 42px;
         display: flex;
@@ -145,6 +145,14 @@ $sec :#AB9D77;
 }
 .vp-fancybox .fancybox-caption__body h3 {
     font-size: 16px !important;
+}
+@media (max-width: 921px) {
+    .fancybox-container {
+        z-index: 99994 !important;
+    }
+    .vp-portfolio__item-overlay {
+        display: none !important;
+    }
 }
 //360
 .virtual-reality-360-iframe {
