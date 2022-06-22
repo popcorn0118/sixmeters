@@ -13,6 +13,12 @@ Template: astra
   display: none;
 }
 
+@media (max-width: 1024px) {
+  .page-banner {
+    background-size: 100% !important;
+  }
+}
+
 @media (max-width: 921px) {
   body {
     overflow: auto;

@@ -19,6 +19,14 @@ $sec :#AB9D77;
         display: none;
     }
 }
+//header-banner 
+@media (max-width: 1024px) {
+    //ipad
+    .page-banner {
+        background-size: 100% !important;
+    }
+}
+
 //手機板選單
 @media (max-width: 921px) {
     body {
