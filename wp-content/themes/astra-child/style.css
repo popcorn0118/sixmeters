@@ -14,6 +14,12 @@ Template: astra
 }
 
 @media (max-width: 921px) {
+  body {
+    overflow: auto;
+  }
+  body.fancybox-active, body.menu-open {
+    overflow: hidden;
+  }
   .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
     max-width: 100% !important;
   }
@@ -113,6 +119,10 @@ Template: astra
   color: #e2c699 !important;
 }
 
+.vp-fancybox .fancybox-thumbs__list a {
+  height: 101px !important;
+}
+
 .vp-fancybox .fancybox-thumbs__list a::before {
   border-color: #e2c699 !important;
 }
@@ -128,6 +138,30 @@ Template: astra
 
 .vp-fancybox .fancybox-caption__body h3 {
   font-size: 16px !important;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .95 !important;
+}
+
+.vp-fancybox .fancybox-thumbs {
+  background: transparent !important;
+}
+
+.fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav .fancybox-button > div {
+  background: #0b1014 !important;
+}
+
+.fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav .fancybox-button:hover > div, .fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav .fancybox-button:active > div {
+  background: #e2c699 !important;
+}
+
+.fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav .fancybox-toolbar > .fancybox-button {
+  background: #0b1014 !important;
+}
+
+.fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav .fancybox-toolbar > .fancybox-button:hover {
+  background: #e2c699 !important;
 }
 
 @media (max-width: 921px) {

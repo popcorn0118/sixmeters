@@ -21,6 +21,12 @@ $sec :#AB9D77;
 }
 //手機板選單
 @media (max-width: 921px) {
+    body {
+        overflow: auto;
+        &.fancybox-active, &.menu-open {
+            overflow: hidden;
+        }
+    }
     .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
         max-width: 100% !important;
     }
@@ -130,9 +136,13 @@ $sec :#AB9D77;
         color: $primary !important;
     }
 }
-.vp-fancybox .fancybox-thumbs__list a::before {
-    border-color: $primary !important;
+.vp-fancybox .fancybox-thumbs__list a {
+    height: 101px !important;
+    &::before {
+        border-color: $primary !important;
+    }
 }
+
 .vp-portfolio__items-style-fade .vp-portfolio__item-overlay {
 
 }
@@ -146,6 +156,31 @@ $sec :#AB9D77;
 .vp-fancybox .fancybox-caption__body h3 {
     font-size: 16px !important;
 }
+.fancybox-is-open .fancybox-bg {
+    opacity: .95 !important;
+}
+.vp-fancybox .fancybox-thumbs {
+    background: transparent !important;
+}
+.fancybox-show-toolbar.fancybox-show-infobar.fancybox-show-nav {
+    .fancybox-button {
+        > div {
+            background: #0b1014 !important;
+        }
+        &:hover, &:active {
+            > div {
+                background: $primary !important;
+            }
+        }
+    }
+    .fancybox-toolbar > .fancybox-button {
+        background: #0b1014 !important;
+        &:hover {
+            background: $primary !important;
+        }
+    }
+}
+
 @media (max-width: 921px) {
     .fancybox-container {
         z-index: 99994 !important;
