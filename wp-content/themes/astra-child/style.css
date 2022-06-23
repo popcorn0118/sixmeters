@@ -9,27 +9,37 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+.overflow-h {
+  overflow: hidden !important;
+}
+
+body {
+  overflow: auto;
+}
+
+body.fancybox-active, body.menu-open {
+  overflow: hidden;
+}
+
 .home header, .home footer {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
   .page-banner {
     background-size: 100% !important;
+    -webkit-transition: unset !important;
+    transition: unset !important;
   }
 }
 
+ul#ast-hf-menu-1 {
+  overflow: hidden !important;
+}
+
 @media (max-width: 921px) {
-  body {
-    overflow: auto;
-  }
-  body.fancybox-active, body.menu-open {
-    overflow: hidden;
-  }
   .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
     max-width: 100% !important;
-  }
-  .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
     background-color: #1a1a1a !important;
   }
   #ast-hf-mobile-menu {
@@ -121,6 +131,45 @@ Template: astra
   }
 }
 
+#ast-mobile-header {
+  display: none !important;
+}
+
+.ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu {
+  border-top-width: 0 !important;
+  border-color: transparent !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu li a {
+  border-color: transparent !important;
+  width: auto !important;
+}
+
+.ast-header-break-point .main-navigation .stack-on-mobile li {
+  width: auto !important;
+}
+
+.main-header-menu .menu-link, .main-header-menu > a {
+  -webkit-transition: unset !important;
+  transition: unset !important;
+}
+
+.ast-header-break-point .main-navigation ul .menu-item .menu-link {
+  padding: 0 1em !important;
+}
+
 .vp-filter__style-minimal .vp-filter__item.vp-filter__item-active > a, .vp-filter__style-minimal .vp-filter__item > a:hover, .vp-filter__style-minimal .vp-filter__item a:focus {
   color: #e2c699 !important;
 }
@@ -170,7 +219,7 @@ Template: astra
   background: #e2c699 !important;
 }
 
-@media (max-width: 921px) {
+@media (max-width: 1366px) {
   .fancybox-container {
     z-index: 99994 !important;
   }

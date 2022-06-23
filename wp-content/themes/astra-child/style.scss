@@ -12,6 +12,15 @@ Template: astra
 
 $primary :#e2c699;
 $sec :#AB9D77;
+.overflow-h {
+    overflow: hidden !important;
+}
+body {
+    overflow: auto;
+    &.fancybox-active, &.menu-open {
+        overflow: hidden;
+    }
+}
 
 //首頁
 .home {
@@ -20,25 +29,44 @@ $sec :#AB9D77;
     }
 }
 //header-banner 
-@media (max-width: 1024px) {
+@media (max-width: 1366px) {
     //ipad
     .page-banner {
         background-size: 100% !important;
+        transition: unset !important;
     }
 }
 
 //手機板選單
-@media (max-width: 921px) {
-    body {
-        overflow: auto;
-        &.fancybox-active, &.menu-open {
-            overflow: hidden;
-        }
+.site-header-primary-section-right.site-header-section.ast-flex.ast-grid-right-section {
+    // display: none !important;
+}
+.ast-desktop .ast-primary-header-bar .main-header-menu > .menu-item {
+    // overflow: hidden !important;
+}
+.ast-builder-grid-row>.site-header-section {
+    // width: 402px !important;
+}
+ul#ast-hf-menu-1 {
+    // background: aliceblue !important;
+    // display: flex;
+    // flex-direction: row !important;
+    // width: 402px !important;
+    overflow: hidden !important;
+    // transition: 0.5s;
+    li {
+        // width: 25% !important;
     }
+}
+a.menu-link {
+    // color: red !important;
+    // border: 0px !important;
+}
+// site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item
+// site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item toggled
+@media (max-width: 921px) {
     .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
         max-width: 100% !important;
-    }
-    .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
         background-color: #1a1a1a !important;
     }
     #ast-hf-mobile-menu {
@@ -137,6 +165,38 @@ $sec :#AB9D77;
         display: none;
     }
 }
+// ipad 以下選單會飛
+.ast-header-break-point #ast-mobile-header {
+    #ast-mobile-header {
+        // display: none !important;
+    }
+}
+#ast-mobile-header {
+    display: none !important;
+}
+.ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu {
+    border-top-width: 0 !important;
+    border-color: transparent !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: end;
+    li a {
+        border-color: transparent !important; 
+        width: auto !important;
+    }
+}
+// ul li
+.ast-header-break-point .main-navigation .stack-on-mobile li {
+    width: auto !important;
+}
+.main-header-menu .menu-link, .main-header-menu>a {
+    transition: unset !important;
+}
+.ast-header-break-point .main-navigation ul .menu-item .menu-link {
+    padding: 0 1em !important;
+}
+
 
 //3D作品
 .vp-filter__style-minimal .vp-filter__item {
@@ -189,7 +249,7 @@ $sec :#AB9D77;
     }
 }
 
-@media (max-width: 921px) {
+@media (max-width: 1366px) {
     .fancybox-container {
         z-index: 99994 !important;
     }
