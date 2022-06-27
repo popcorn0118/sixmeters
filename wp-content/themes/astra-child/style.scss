@@ -29,41 +29,83 @@ body {
     }
 }
 //header-banner 
+
+/* Portrait*/
+// @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {}
+
+/* Landscape*/
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape) {}
 @media (max-width: 1366px) {
-    //ipad
+    //ipad pro
     .page-banner {
         background-size: 100% !important;
         transition: unset !important;
     }
+    .site-header-primary-section-right.site-header-section.ast-flex.ast-grid-right-section {
+        // display: none !important;
+    }
+    .ast-desktop .ast-primary-header-bar .main-header-menu > .menu-item {
+        // overflow: hidden !important;
+    }
+    .ast-builder-grid-row>.site-header-section {
+        // width: 402px !important;
+    }
+    ul#ast-hf-menu-1 {
+        // background: aliceblue !important;
+        // display: flex;
+        // flex-direction: row !important;
+        // width: 402px !important;
+        overflow: hidden !important;
+        // transition: 0.5s;
+        li {
+            // width: 25% !important;
+        }
+    }
+    a.menu-link {
+        // color: red !important;
+        // border: 0px !important;
+    }
+    // site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item
+    // site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item toggled
 }
-
-//手機板選單
-.site-header-primary-section-right.site-header-section.ast-flex.ast-grid-right-section {
-    // display: none !important;
-}
-.ast-desktop .ast-primary-header-bar .main-header-menu > .menu-item {
-    // overflow: hidden !important;
-}
-.ast-builder-grid-row>.site-header-section {
-    // width: 402px !important;
-}
-ul#ast-hf-menu-1 {
-    // background: aliceblue !important;
-    // display: flex;
-    // flex-direction: row !important;
-    // width: 402px !important;
-    overflow: hidden !important;
-    // transition: 0.5s;
-    li {
-        // width: 25% !important;
+@media (min-width: 922px) {
+    // 電腦版選單隱藏手機版殘影
+    .ast-header-break-point #ast-mobile-header {
+        #ast-mobile-header {
+            // display: none !important;
+        }
+    }
+    #ast-mobile-header {
+        display: none !important;
+    }
+    .ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu {
+        border-top-width: 0 !important;
+        border-color: transparent !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: end;
+        li a {
+            border-color: transparent !important; 
+            width: auto !important;
+        }
+    }
+    // ul li
+    .ast-header-break-point .main-navigation .stack-on-mobile li {
+        width: auto !important;
+    }
+    .main-header-menu .menu-link, .main-header-menu>a {
+        transition: unset !important;
+    }
+    .ast-header-break-point .main-navigation ul .menu-item .menu-link {
+        padding: 0 1em !important;
     }
 }
-a.menu-link {
-    // color: red !important;
-    // border: 0px !important;
-}
-// site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item
-// site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item toggled
+
+
+
+
+//手機板選單
 @media (max-width: 921px) {
     .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
         max-width: 100% !important;
@@ -164,37 +206,6 @@ a.menu-link {
     .ast-desktop-popup-content {
         display: none;
     }
-}
-// ipad 以下選單會飛
-.ast-header-break-point #ast-mobile-header {
-    #ast-mobile-header {
-        // display: none !important;
-    }
-}
-#ast-mobile-header {
-    display: none !important;
-}
-.ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu {
-    border-top-width: 0 !important;
-    border-color: transparent !important;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: end;
-    li a {
-        border-color: transparent !important; 
-        width: auto !important;
-    }
-}
-// ul li
-.ast-header-break-point .main-navigation .stack-on-mobile li {
-    width: auto !important;
-}
-.main-header-menu .menu-link, .main-header-menu>a {
-    transition: unset !important;
-}
-.ast-header-break-point .main-navigation ul .menu-item .menu-link {
-    padding: 0 1em !important;
 }
 
 
