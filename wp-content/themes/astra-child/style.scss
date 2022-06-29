@@ -78,24 +78,29 @@ body {
     #ast-mobile-header {
         display: none !important;
     }
-    .ast-header-break-point .main-header-bar .main-header-bar-navigation .main-header-menu {
+    .ast-builder-menu .main-navigation>ul {
         border-top-width: 0 !important;
         border-color: transparent !important;
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        justify-content: end;
+        display: block !important;
+        float: right;
+        // background-color: red; //測試用打開
         li a {
             border-color: transparent !important; 
             width: auto !important;
         }
     }
     // ul li
-    .ast-header-break-point .main-navigation .stack-on-mobile li {
+        .ast-header-break-point .main-navigation .stack-on-mobile li {
         width: auto !important;
     }
-    .main-header-menu .menu-link, .main-header-menu>a {
-        transition: unset !important;
+    .main-header-menu {
+        .menu-item {
+            display: inline-block !important;
+        }
+        .menu-link, >a {
+            transition: unset !important;
+        }
+        
     }
     .ast-header-break-point .main-navigation ul .menu-item .menu-link {
         padding: 0 1em !important;
@@ -119,6 +124,10 @@ body {
                 text-align: center;
             }
         }
+    }
+    .ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-bar {
+        background: red !important;
+        display: none !important;
     }
     // .site-header {
     //     z-index: 10001;
