@@ -80,8 +80,7 @@ body.fancybox-active, body.menu-open {
     text-align: center;
   }
   .ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-bar {
-    background: red !important;
-    display: none !important;
+    background: transparent !important;
   }
   .menu-btn-custom {
     position: absolute;
